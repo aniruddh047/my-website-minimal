@@ -1,0 +1,145 @@
+@media only screen and (min-width: 768px) {
+
+  .mdl-layout__drawer-button,
+  .mdl-layout__content {
+    display: none;
+  }
+
+  .nav-desktop {
+    margin: auto;
+    width: 27%;
+  }
+
+  .nav-desktop .mdl-button {
+    color: white;
+    margin-right: 20px;
+    text-transform: none;
+    font-size: 16px;
+  }
+
+  .nav-desktop .mdl-button:last-child {
+    margin-right: 0;
+  }
+
+  .mdl-button:hover {
+    background: #d32f2f;
+  }
+
+  .logo-container {
+    display: inline-block;
+    background: #ff1227;
+    height: 100%;
+    width: 40vw;
+    transform: translateY(100vh);
+    animation: move-up 0.7s ease-in-out forwards;
+    overflow: hidden;
+  }
+
+  .logo {
+    width: 100%;
+    height: 400px;
+    margin: 20vh auto;
+  }
+
+  .greeting-container {
+    display: inline-block;
+    height: 100%;
+    width: 60vw;
+    background: black;
+    transform: translateX(60vw);
+    animation: move-left 0.7s ease-in-out 1s forwards;
+    overflow: hidden;
+  }
+
+  .greeting-container .line {
+    font-size: 6em;
+    line-height: 80px;
+  }
+  
+  .line-1 {
+    opacity: 0;
+    animation: appear-low-to-high 1s ease-out 2s forwards;
+  }
+
+  .line-2 {
+    opacity: 0;
+    animation: appear-low-to-high 1s ease-out 3s forwards;
+  }
+
+  .line-3 {
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    animation: appear-low-to-high 1s ease-out 4s forwards;
+  }
+
+  .message-container {
+    height: 20vh;
+    margin: 30vh auto;
+    text-align: center;
+  }
+
+  @keyframes appear-low-to-high {
+    0% {
+      transform: translateY(10vh);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0vh);
+      opacity: 1;
+    }
+  }
+
+  @keyframes move-up {
+    from {
+      transform: translateY(100vh);
+    }
+    to {
+      transform: translateY(0vh);
+    }
+  }
+
+  @keyframes move-left {
+    from {
+      transform: translateX(60vw);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+.about-section .picture .profile-image {
+  height: 65vh;
+  margin: 15vh;
+} 
+
+.about-info {
+  animation: move-up 0.7s ease-in-out forwards;
+  height: 85vh;
+}
+
+.work-section-header {
+  animation: appear-low-to-high 0.7s ease-in-out forwards;
+  padding: 5vh 10vw;
+  line-height: 25px;
+}
+
+.contact-section-header {
+  animation: appear-low-to-high 0.7s ease-in-out forwards;
+}
+
+.work-section-header p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.work-section-content {
+  height: calc(100vh - 48px);
+  background: #ff1227;
+}
+.contact-section-content {
+  height: calc(100vh - 48px);
+  background: #ff1227;
+}

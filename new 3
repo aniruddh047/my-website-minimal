@@ -1,0 +1,122 @@
+// tabs backup
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="Aniruddh,Upparna" />
+    <title>Aniruddh Upparna</title>
+    <meta name="description" content="Aniruddh's website" />
+    <meta name="author" content="Aniruddh Upparna" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header">
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+          <div class="mdl-tabs__tab-bar">
+            <a href="#fixed-tab-1" class="mdl-tabs__tab is-active">Tab 1</a>
+            <a href="#fixed-tab-2" class="mdl-tabs__tab">Tab 2</a>
+            <a href="#fixed-tab-3" class="mdl-tabs__tab">Tab 3</a>
+            <a href="#fixed-tab-2" class="mdl-tabs__tab">Tab 4</a>
+            <a href="#fixed-tab-3" class="mdl-tabs__tab">Tab 5</a>
+          </div>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" data-scrollto="home-section" href=""
+            >Home</a
+          >
+          <a class="mdl-navigation__link" data-scrollto="about-section" href=""
+            >About</a
+          >
+          <a class="mdl-navigation__link" data-scrollto="skills-section" href=""
+            >Skills</a
+          >
+          <a
+            class="mdl-navigation__link"
+            data-scrollto="contact-section"
+            href=""
+            >Contact</a
+          >
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <section class="home-section">
+          <div class="logo">
+            <img class="logo-image" src="assets/images/a-logo.svg" alt="logo" />
+          </div>
+          <p>Hi there, I'm Aniruddh</p>
+          <p class="scroll-text">Scroll down to know more</p>
+          <i class="material-icons scroll-icon">
+            keyboard_arrow_down
+          </i>
+        </section>
+        <section class="about-section">
+          <div class="about-info">
+            <p>Hi, I'm Aniruddh.</p>
+            <p>
+              I am a front-end web-developer passionate about creating cool
+              websites with great user experiences. Tada
+            </p>
+          </div>
+          <div class="picture">
+            <img class="profile-image" alt="profile-image" src="" />
+          </div>
+        </section>
+        <section class="skills-section">
+          <div class="animate-src">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            nisi massa, tristique at lobortis quis, pulvinar nec ipsum. Vivamus
+            ac condimentum urna. In ac ultrices lacus, ultrices bibendum tellus.
+            Aenean vitae dui porttitor, porttitor mauris in, blandit ipsum.
+            Mauris convallis sed sapien nec venenatis. Cras eros velit, mattis
+            vel interdum nec, tincidunt eget tellus. Aliquam molestie commodo
+            elit, at commodo ex molestie ut. Fusce est tortor, volutpat sit amet
+            ante vel, varius laoreet diam. Aliquam erat volutpat. Nullam in
+            tempor odio. Vivamus porttitor, ante vel fringilla finibus, erat
+            tortor tristique est, nec pellentesque odio lorem id velit. Sed
+            finibus vehicula imperdiet.
+          </div>
+          <div class="animate-src">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            nisi massa, tristique at lobortis quis, pulvinar nec ipsum. Vivamus
+            ac condimentum urna. In ac ultrices lacus, ultrices bibendum tellus.
+            Aenean vitae dui porttitor, porttitor mauris in, blandit ipsum.
+            Mauris convallis sed sapien nec venenatis. Cras eros velit, mattis
+            vel interdum nec, tincidunt eget tellus. Aliquam molestie commodo
+            elit, at commodo ex molestie ut. Fusce est tortor, volutpat sit amet
+            ante vel, varius laoreet diam. Aliquam erat volutpat. Nullam in
+            tempor odio. Vivamus porttitor, ante vel fringilla finibus, erat
+            tortor tristique est, nec pellentesque odio lorem id velit. Sed
+            finibus vehicula imperdiet.
+          </div>
+          <div class="animate-src">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            nisi massa, tristique at lobortis quis, pulvinar nec ipsum. Vivamus
+            ac condimentum urna. In ac ultrices lacus, ultrices bibendum tellus.
+            Aenean vitae dui porttitor, porttitor mauris in, blandit ipsum.
+            Mauris convallis sed sapien nec venenatis. Cras eros velit, mattis
+            vel interdum nec, tincidunt eget tellus. Aliquam molestie commodo
+            elit, at commodo ex molestie ut. Fusce est tortor, volutpat sit amet
+            ante vel, varius laoreet diam. Aliquam erat volutpat. Nullam in
+            tempor odio. Vivamus porttitor, ante vel fringilla finibus, erat
+            tortor tristique est, nec pellentesque odio lorem id velit. Sed
+            finibus vehicula imperdiet.
+          </div>
+        </section>
+        <section class="contact-section"></section>
+      </main>
+    </div>
+    <script src="js/index.min.js" async></script>
+    <script src="libs/material.min.js" async defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="libs/material.min.css" />
+    <link rel="stylesheet" href="css/index.min.css" />
+  </body>
+</html>

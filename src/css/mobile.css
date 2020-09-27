@@ -1,0 +1,23 @@
+@media only screen and (max-width: 768px) {
+  .mdl-tabs__tab-bar {
+    display: none;
+  }
+
+  .mdl-layout__drawer-button {
+    color: white;
+    background: #d31f2f;
+    border-radius: 50%;
+    padding: 2px;
+  }
+
+  .home-section {
+    height: 100vh;
+  }
+  .home-section p {
+    line-height: 35px;
+  }
+  .logo,
+  .logo-image {
+    width: 70vw;
+  }
+}

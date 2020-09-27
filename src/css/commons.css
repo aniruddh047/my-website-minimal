@@ -1,0 +1,196 @@
+/* font declarations */
+@font-face {
+  font-family: bangers;
+  src: url("../assets/fonts/Bangers-Regular.ttf");
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+/* animations */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-icon-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* common styles */
+body, p, div {
+  font-family: roboto;
+} 
+
+.mdl-button {
+  transition: background 0.3s linear;
+}
+
+.mdl-button:hover,
+.mdl-button.active-button {
+  background: #d32f2f;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.mdl-layout__header {
+  background: black;
+}
+
+.mdl-tabs__tab-bar {
+  border-bottom: none;
+  /* background: #3F51B5; */
+  /* box-shadow: 0px 2px 8px black; */
+  z-index: 1;
+  width: 100vw;
+  position: fixed;
+}
+
+.mdl-tabs__tab,
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+  color: white;
+  padding: 0 50px;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+  height: 5px;
+  background: none;
+  /* animation: none; */
+}
+
+/* home section styles */
+
+.home-section {
+  /* background-image: url("../assets/images/waves.jpg"); */
+  background: #3F51B5;
+  background: rgb(11, 11, 11);
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  opacity: 0.8;
+  position: relative;
+  /* top: 48px; */
+}
+
+.logo {
+  transform: scale(0.85);
+}
+
+
+.home-section p {
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: 2px;
+  font-family: bangers;
+  color: #d31f2f;
+  text-shadow: 2px 2px 1px black;
+}
+
+.home-section .scroll-text {
+  font-size: 1em;
+  margin-top: 25vh;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.scroll-icon {
+  color: white;
+  font-size: 75px;
+  width: 70px;
+  margin: auto;
+  display: block;
+  animation: scroll-icon-animation 1.5s linear infinite;
+}
+
+/* about section styles */
+.about-section {
+  background-image: url("../assets/images/nature-sunset-minimalist.jpg");
+  background-size: cover;
+  opacity: 0.8;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+  background: black;
+  /* top: 48px; */
+}
+
+.about-section .picture {
+  display: inline-block;
+}
+
+.about-info {
+  width: 50vw;
+  display: inline-block;
+  background: #ff1227;
+  color: white;
+  height: 100vh;
+  padding-top: 15vh;
+  vertical-align: top;
+  animation: fadein 3s ease-out;
+}
+
+.about-info p {
+  font-size: 20px;
+  padding: 0 50px;
+}
+
+/* work section styles */
+.work-section {
+  background: black;
+  opacity: 0.8;
+  overflow: hidden;
+  position: relative;
+  padding-top: 28px;
+  height: calc(100vh - 31px);
+}
+
+/* contact section styles */
+.contact-section {
+  background: black;
+  opacity: 0.8;
+  overflow: hidden;
+  position: relative;
+  height: calc(100vh - 48px);
+  padding-top: 48px;
+}
+
+.contact-section-header {
+  color: white;
+  font-size: 50px;
+  padding: 10vh;
+  line-height: 50px;
+  text-align: center;
+}
+
+.work-section-header {
+  transform: translateY(0);
+  color: white;
+  margin: 20px 0;
+  background: #ff1227;
+}
+
+.active-transition {
+  transform: translateY(-30px);
+}
+

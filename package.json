@@ -1,0 +1,40 @@
+{
+  "name": "my-website-minimal",
+  "version": "1.0.0",
+  "description": "Minimal version of Aniruddh's website",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniruddh047/my-website-minimal.git"
+  },
+  "author": "Aniruddh Upparna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniruddh047/my-website-minimal/issues"
+  },
+  "homepage": "https://github.com/aniruddh047/my-website-minimal#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "autoprefixer": "^9.4.7",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.3",
+    "compression": "^1.7.4",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
