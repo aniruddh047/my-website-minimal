@@ -74,7 +74,6 @@
   }
 
   .message-container {
-    height: 20vh;
     margin: 30vh auto;
     text-align: center;
   }
@@ -103,6 +102,15 @@
   @keyframes move-left {
     from {
       transform: translateX(60vw);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes move-right {
+    from {
+      transform: translateX(-60vw);
     }
     to {
       transform: translateX(0);
@@ -137,9 +145,57 @@
 
 .work-section-content {
   height: calc(100vh - 48px);
-  background: #ff1227;
+  background: black;
 }
+
 .contact-section-content {
   height: calc(100vh - 48px);
   background: #ff1227;
+}
+
+.skills-block {
+  transform: translateX(60vw);
+  background: whitesmoke;
+  animation: move-left 0.7s ease-in-out 1s forwards;
+}
+
+.skills-block .material-icons {
+    font-size: 50px;
+    margin: 0 -10px;
+    margin-top: 10px;
+}
+
+.skills-block .skills-title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.skills-heading-text {
+  vertical-align: top;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.contact-section-mail {
+  width: 50vw;
+  display: inline-block;
+  background: whitesmoke;
+  height: 100%;
+  transform: translateX(-60vw);
+  animation: move-right 0.7s ease-in-out 1s forwards;
+}
+
+.contact-section-info {
+  width: 50vw;
+  display: inline-block;
+  background: black;
+  height: 100%;
+  transform: translateX(60vw);
+  animation: move-left 0.7s ease-in-out 1s forwards;
+}
+
+.download-resume-btn {
+  transform: translateY(100vh);
+  animation: move-up 2s ease-in-out 3s forwards;
 }

@@ -45,7 +45,7 @@ body, p, div {
 
 .mdl-button:hover,
 .mdl-button.active-button {
-  background: #d32f2f;
+  background: #ff1227;
 }
 
 ::-webkit-scrollbar {
@@ -72,16 +72,18 @@ body, p, div {
 }
 
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
-  height: 5px;
-  background: none;
-  /* animation: none; */
+  height: 3px;
+  visibility: hidden;
 }
 
+.mdl-tabs.is-upgraded .mdl-tabs__tab:after {
+  visibility: visible;
+}
 /* home section styles */
 
 .home-section {
   /* background-image: url("../assets/images/waves.jpg"); */
-  background: #3F51B5;
+  /* background: #3F51B5; */
   background: rgb(11, 11, 11);
   background-size: cover;
   overflow: hidden;
@@ -102,7 +104,7 @@ body, p, div {
   font-size: 3em;
   letter-spacing: 2px;
   font-family: bangers;
-  color: #d31f2f;
+  color: #ff1227;
   text-shadow: 2px 2px 1px black;
 }
 
@@ -162,7 +164,7 @@ body, p, div {
   overflow: hidden;
   position: relative;
   padding-top: 28px;
-  height: calc(100vh - 31px);
+  height: calc(100vh - 30px);
 }
 
 /* contact section styles */
@@ -180,13 +182,14 @@ body, p, div {
   font-size: 50px;
   padding: 10vh;
   line-height: 50px;
+  font-family: bangers;
   text-align: center;
 }
 
 .work-section-header {
   transform: translateY(0);
   color: white;
-  margin: 20px 0;
+  margin-top: 20px;
   background: #ff1227;
 }
 
@@ -194,3 +197,44 @@ body, p, div {
   transform: translateY(-30px);
 }
 
+.work-section-info {
+  /* padding: 5vh 10vw; */
+  height: 100%;
+  width: 50vw;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.work-section-info .career {
+  color:  white;
+}
+
+.tech-icons-panel {
+  font-size: 30px;
+  text-align: center;
+  margin: 30px;
+}
+
+.tech-icons-panel i {
+  margin: 0 20px;
+}
+
+.tech-names-panel {
+  font-size: 16px;
+  text-align: center;
+  margin: 30px;
+}
+
+.tech-names-panel span {
+  visibility: hidden;
+}
+
+.download-resume-btn,
+.download-resume-btn:active,
+.download-resume-btn:visited{
+  display: block;
+  width: 150px;
+  color: white;
+  background: #ff1227;
+  margin: 40px auto;
+}
