@@ -12,7 +12,7 @@ var htmlmin = require("gulp-htmlmin");
 var compress = require("compression");
 
 function copy() {
-  return src("src/**/*").pipe(dest("build/"));
+  return src("src/**/*").pipe(dest("docs/"));
 }
 
 function processJs() {
@@ -31,7 +31,7 @@ function processJs() {
         }
       })
     )
-    .pipe(dest("build/js"));
+    .pipe(dest("docs/js"));
 }
 
 function processCss() {
@@ -44,7 +44,7 @@ function processCss() {
         suffix: ".min"
       })
     )
-    .pipe(dest("build/css"));
+    .pipe(dest("docs/css"));
 }
 
 function serve() {
@@ -60,7 +60,7 @@ function serve() {
 function minifyHtml() {
   return src("src/index.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("build"));
+    .pipe(dest("docs"));
 }
 
 watch("src/css/*.css", processCss);
