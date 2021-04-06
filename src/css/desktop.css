@@ -26,7 +26,7 @@
   }
 
   .logo-container {
-    display: inline-block;
+    display: inline-flex;
     background: #ff1227;
     height: 100%;
     width: 40vw;
@@ -38,11 +38,13 @@
   .logo {
     width: 100%;
     height: 400px;
-    margin: 20vh auto;
+    text-align: center;
+    margin: auto;
   }
 
   .greeting-container {
-    display: inline-block;
+    display: inline-flex;
+    vertical-align: top;
     height: 100%;
     width: 60vw;
     background: black;
@@ -55,39 +57,13 @@
     font-size: 6em;
     line-height: 80px;
   }
-  
-  .line-1 {
-    opacity: 0;
-    animation: appear-low-to-high 1s ease-out 2s forwards;
-  }
-
-  .line-2 {
-    opacity: 0;
-    animation: appear-low-to-high 1s ease-out 3s forwards;
-  }
 
   .line-3 {
-    color: white;
-    font-size: 20px;
-    opacity: 0;
-    animation: appear-low-to-high 1s ease-out 4s forwards;
+    font-size: 1.5em;
   }
 
   .message-container {
-    margin: 30vh auto;
-    text-align: center;
-  }
-
-  @keyframes appear-low-to-high {
-    0% {
-      transform: translateY(10vh);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateY(0vh);
-      opacity: 1;
-    }
+    margin: auto;
   }
 
   @keyframes move-up {
@@ -125,7 +101,14 @@
 
 .about-info {
   animation: move-up 0.7s ease-in-out forwards;
-  height: 85vh;
+}
+
+.about-text {
+  height: 75%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .work-section-header {
@@ -139,7 +122,7 @@
 }
 
 .work-section-header p {
-  font-size: 20px;
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
@@ -179,18 +162,23 @@
 
 .contact-section-mail {
   width: 50vw;
-  display: inline-block;
+  display: inline-flex;
   background: whitesmoke;
-  height: 100%;
+  height: 75%;
   transform: translateX(-60vw);
+  justify-content: center;
+  align-items: center;
   animation: move-right 0.7s ease-in-out 1s forwards;
 }
 
 .contact-section-info {
   width: 50vw;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background: black;
-  height: 100%;
+  color: #f5f5f5;
+  height: 75%;
   transform: translateX(60vw);
   animation: move-left 0.7s ease-in-out 1s forwards;
 }
@@ -198,4 +186,37 @@
 .download-resume-btn {
   transform: translateY(100vh);
   animation: move-up 2s ease-in-out 3s forwards;
+}
+
+.contact-section-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50%;
+  width: 75%;
+}
+
+.social-link .address {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+  margin: 10px 50px;
+}
+
+.social-link i {
+  color: #f5f5f5;
+  font-size: 3em;
+}
+
+.contact-fields {
+  display: block;
+  width: 100%;
+}
+
+.contact-form {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }

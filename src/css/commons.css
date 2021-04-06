@@ -97,6 +97,9 @@ body, p, div {
   transform: scale(0.85);
 }
 
+.logo svg {
+  margin: 0 -90px;
+}
 
 .home-section p {
   color: white;
@@ -116,6 +119,38 @@ body, p, div {
   color: white;
 }
 
+.line-1 {
+  opacity: 0;
+  animation: appear-low-to-high 1s ease-out 2s forwards;
+}
+
+.line-2 {
+  opacity: 0;
+  animation: appear-low-to-high 1s ease-out 3s forwards;
+}
+
+.line-3 {
+  color: white;
+  opacity: 0;
+  animation: appear-low-to-high 1s ease-out 4s forwards;
+}
+
+.message-container {
+  text-align: center;
+}
+
+@keyframes appear-low-to-high {
+  0% {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+
 .scroll-icon {
   color: white;
   font-size: 75px;
@@ -131,7 +166,7 @@ body, p, div {
   background-size: cover;
   opacity: 0.8;
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   background: black;
   /* top: 48px; */
@@ -139,6 +174,8 @@ body, p, div {
 
 .about-section .picture {
   display: inline-block;
+  width: 50%;
+  height: 100%;
 }
 
 .about-info {
@@ -147,7 +184,6 @@ body, p, div {
   background: #ff1227;
   color: white;
   height: 100vh;
-  padding-top: 15vh;
   vertical-align: top;
   animation: fadein 3s ease-out;
 }
@@ -210,13 +246,15 @@ body, p, div {
 }
 
 .tech-icons-panel {
-  font-size: 30px;
-  text-align: center;
-  margin: 30px;
+  font-size: 3em;
+  width: 75%;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tech-icons-panel i {
-  margin: 0 20px;
+  margin: 20px;
 }
 
 .tech-names-panel {
@@ -237,4 +275,8 @@ body, p, div {
   color: white;
   background: #ff1227;
   margin: 40px auto;
+}
+
+.contact-section-info {
+  vertical-align: top;
 }

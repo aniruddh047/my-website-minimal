@@ -14,13 +14,24 @@ function main() {
   //     }
   //   });
   // }
-  // $(".js-header-btn").on("click", handleNavClick);
-  // function handleNavClick(e) {
-  //   if ($(".active-button")) {
-  //     $(".active-button").removeClass("active-button");
-  //   }
-  //   var scrollto = "." + e.currentTarget.getAttribute("data-scrollto");
-  //   $(scrollto)[0].scrollIntoView({ behavior: "smooth" });
-  //   e.currentTarget.classList.add("active-button");
-  // }
+  
+  $(".js-header-btn").on("click", handleNavClick);
+  checkWidth();
+}
+
+function handleNavClick(e) {
+  var scrollto = "." + e.currentTarget.getAttribute("data-scrollto");
+  $(scrollto)[0].scrollIntoView({ behavior: "smooth" });
+}
+
+function checkWidth() {
+  var windowsize =  $(window).width();
+  if(windowsize < 768) {
+    relocateContent();
+  }
+}
+
+function relocateContent(){
+  var tabsContent = $('.mdl-tabs section');
+  tabsContent.appendTo('.js-mobile-content')
 }

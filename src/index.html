@@ -28,7 +28,7 @@
         <div class="logo-container">
           <div class="logo">
             <!-- <img class="logo-image" src="assets/images/a-logo.svg" alt="logo" /> -->
-            <svg width="490" height="400" xmlns="http://www.w3.org/2000/svg">
+            <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
               <g>
               <path stroke="#ffffff" id="svg_4" stroke-width="1.5" fill="#ffffff" d="M88.49999999999997,200A200.000009,198 0,1,1 488.50001799999995,200A200.000009,198 0,1,1 88.49999999999997,200" class="GKGItGzd_0"></path>
               <path stroke="#000000" id="svg_10" d="m163.6925,302.20842l124,-228.99999l123.99999,228.99999l-247.99999,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#000000" class="GKGItGzd_1"></path>
@@ -51,22 +51,10 @@
           </div>
         </div>
       </section>
-      <section class="about-section mdl-tabs__panel" id="about">
-        <div class="picture">
-          <img class="profile-image" alt="profile-image" src="assets/images/profile_pic_1.png" />
-        </div>
-        <div class="about-info">
-          <p>Hi, Aniruddh here.</p>
-          <p>
-            I am a front-end web-developer passionate about creating cool
-            websites with great user experiences.
-          </p>
-        </div>
-      </section>
       <section class="work-section mdl-tabs__panel" id="work">
         <div class="work-section-content">
           <div class="work-section-header">
-            <p>I am a Front End Web Developer with 3+ years of industry experience building websites for both product and service based companies.</p>
+            <p>I am a Front End Web Developer with 4+ years of industry experience building websites for both product and service based companies.</p>
             <p>I specialize in JavaScript and have professional experience working with React, Angular 2+ and jQuery.</p>
             <p>I am currently learning Python and expanding my skill set towards becoming a full stack developer.</p>
           </div>
@@ -105,16 +93,59 @@
             
         </div>
       </section>
+      <section class="about-section mdl-tabs__panel" id="about">
+        <div class="picture">
+          <img class="profile-image" alt="profile-image" src="assets/images/profile_pic_1.png" />
+        </div>
+        <div class="about-info">
+          <div class="about-text">
+            <p>Hi, Aniruddh here.</p>
+            <p>
+              I am a front-end web-developer passionate about creating cool
+              websites with great user experiences.
+            </p>
+          </div>
+        </div>
+      </section>
       <section class="contact-section mdl-tabs__panel" id="contact">
         <div class="contact-section-content">
           <div class="contact-section-header">
             I'D LOVE TO HEAR FROM YOU
           </div>
           <div class="contact-section-mail">
-
+            <form action="#" class="contact-form">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label contact-fields">
+                <input class="mdl-textfield__input" type="text">
+                <label class="mdl-textfield__label" for="sample3">Name</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label contact-fields">
+                <input class="mdl-textfield__input" type="email">
+                <label class="mdl-textfield__label" for="sample3">Email</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield contact-fields">
+                <textarea class="mdl-textfield__input" type="text" rows="5"></textarea>
+                <label class="mdl-textfield__label" for="sample5">Message</label>
+              </div>
+              <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Send message</button>
+            </form>
           </div>
           <div class="contact-section-info">
-
+            <div class="contact-section-container">
+                  <div class="social-link">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="address">Bengaluru (Bangalore), Karnataka, India</div>
+                  </div>
+                  <div class="social-link">
+                    <a href="https://github.com/aniruddhupparna" target="_blank"><i class="fab fa-github-alt"></i></a>
+                  </div>
+                  <div class="social-link">
+                    <a href="https://www.linkedin.com/in/aniruddh-upparna-72570494" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                  </div>
+                  <div class="social-link">
+                    <a href="mailto:aniruddhupparna@gmail.com"> <i class="fas fa-envelope"></i></a>
+                  </div>
+              
+            </div>
           </div>
         </div>
       </section>
@@ -122,13 +153,14 @@
 
     <div class="mdl-layout__drawer">
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" data-scrollto="home-section" href="">Home</a>
-        <a class="mdl-navigation__link" data-scrollto="work-section" href="">Work</a>
-        <a class="mdl-navigation__link" data-scrollto="about-section" href="">About</a>
-        <a class="mdl-navigation__link" data-scrollto="contact-section" href="">Contact</a>
+        <a class="mdl-navigation__link js-header-btn" data-scrollto="home-section" href="javascript:void(0)">HOME</a>
+        <a class="mdl-navigation__link js-header-btn" data-scrollto="work-section" href="javascript:void(0)">WORK</a>
+        <a class="mdl-navigation__link js-header-btn" data-scrollto="about-section" href="javascript:void(0)">ABOUT</a>
+        <a class="mdl-navigation__link js-header-btn" data-scrollto="contact-section" href="javascript:void(0)">CONTACT</a>
       </nav>
     </div>
-    <main class="mdl-layout__content"></main>
+    <main class="mdl-layout__content js-mobile-content">
+    </main>
   </div>
   <script src="js/index.min.js" async></script>
   <script src="libs/material.min.js" defer></script>

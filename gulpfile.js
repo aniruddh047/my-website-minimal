@@ -49,7 +49,7 @@ function processCss() {
 
 function serve() {
   return browserSync.init({
-    server: "build",
+    server: "docs",
     open: false,
     port: 7000,
     middleware: [compress()],
