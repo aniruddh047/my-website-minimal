@@ -31,7 +31,7 @@
     height: 100%;
     width: 40vw;
     transform: translateY(100vh);
-    animation: move-up 0.7s ease-in-out forwards;
+    animation: move-up 0.7s ease-in-out 1s forwards; 
     overflow: hidden;
   }
 
@@ -94,6 +94,15 @@
   }
 }
 
+  @keyframes expand-line {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(0.75);
+    }
+  }
+
 .about-section .picture .profile-image {
   height: 65vh;
   margin: 15vh;
@@ -131,6 +140,45 @@
   background: black;
 }
 
+.career {
+  color: white;
+  font-size: 2em;
+  transform: translateX(-60vw);
+  animation: move-right 0.7s ease-in-out 1s forwards;
+}
+
+.work-xp-container {
+  height: 70%;
+  display: flex;
+  padding: 5% 20%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.progress-line {
+  position: absolute;
+  width: 10px;
+  height: 60%;
+  background: #ff1227;
+  margin-left: 50px;
+  animation: show-progress 2s linear 3s forwards;
+  transform: scaleY(0.0);
+  top: -50px;
+  z-index: -1;
+}
+
+@keyframes show-progress {
+  from {
+    transform: scaleY(0.0);
+    top: -50px;
+  }
+  to {
+    transform: scaleY(1);
+    top: 120px;
+  }
+}
+
 .contact-section-content {
   height: calc(100vh - 48px);
   background: #ff1227;
@@ -160,10 +208,91 @@
   margin-top: 25px;
 }
 
-.contact-section-mail {
+.tech-icons-panel i {
+  transition: transform 0.2s linear;
+}
+
+.tech-icons-panel i:hover {
+  transform: scale(1.5);
+}
+
+.xp {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.xp .number {
+    font-size: 14px;
+    display: inline-block;
+    position: absolute;
+    border: 1px solid;
+    border-radius: 50%;
+    left: 75px;
+    z-index: 100;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+}
+
+.xp-text {
+  margin: 15px 20px;
+}
+
+.xp-text p:last-child{
+  margin: 0;
+ }
+
+ .xp-text p:first-child{
+  
+ }
+
+.xp-icon-container {
+  background-color: #ff1227;
+  margin: 10px;
+  display: flex;
+  border: 5px solid black;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  min-height: 80px;
+  transform: rotate(45deg);
+  z-index: 99;
+}
+
+.xp-icon-container i {
+  transform: rotate(-45deg);
+ }
+
+ .btn-prev, .btn-next {
+  width: 50px;
+  height: 50px;
+  font-size: 2.5em;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff1227;
+  color: white;
+  margin: 20px;
+  box-shadow: 2px 2px 8px black;
+ }
+
+ .btn-prev.hide-btn, .btn-next.hide-btn {
+   visibility: hidden;
+ }
+
+ .skill-card .mdl-card__title {
+  background-size: contain;
+  color: white;
+  height: 70%;
+ }
+
+.contact-section-image {
   width: 50vw;
   display: inline-flex;
-  background: whitesmoke;
   height: 75%;
   transform: translateX(-60vw);
   justify-content: center;
@@ -192,7 +321,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 50%;
+  height: 70%;
   width: 75%;
 }
 
@@ -200,12 +329,28 @@
   display: inline-block;
   font-size: 16px;
   vertical-align: top;
-  margin: 10px 50px;
+  margin: 10px 30px;
+}
+
+.social-link {
+  transition: transform 0.2s linear;
+}
+
+.address-info,
+.social-media-links {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.address-info .social-link i{
+  font-size: 4em;
 }
 
 .social-link i {
   color: #f5f5f5;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .contact-fields {
@@ -219,4 +364,37 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+}
+
+.social-media-links .social-link {
+  padding: 12px;
+  background: white;
+  border-radius: 50%;
+}
+
+.social-media-links .social-link:hover {
+  transform: scale(1.5);
+}
+
+.social-media-links .social-link i {
+  color: black;
+}
+
+.contact-section-container .separator {
+    font-size: 3em;
+    font-family: 'kaushan';
+    text-align: center;
+    position: relative;
+}
+
+.contact-section-container .separator::after {
+  content: '';
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  background: linear-gradient(to right, white 0 25%, transparent 25% 75%, white 75% 100%);
+  position: absolute;
+  left: 0;
+  top: 15px;
+  animation: expand-line 1s linear 2s forwards;
 }

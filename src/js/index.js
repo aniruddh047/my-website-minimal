@@ -2,21 +2,12 @@ import $ from "jquery";
 $(document).ready(main);
 
 function main() {
-  // var observer = new IntersectionObserver(callback);
-  // $(".animate-src").each(animate);
-  // function animate(index, item) {
-  //   observer.observe(item);
-  // }
-  // function callback(entries) {
-  //   entries.forEach(entry => {
-  //     if (entry.intersectionRatio > 0.7) {
-  //       entry.target.classList.add("active-transition");
-  //     }
-  //   });
-  // }
-  
+  const year = (new Date()).getFullYear().toString()
+  $('#copyright-year').append(year);
   $(".js-header-btn").on("click", handleNavClick);
   checkWidth();
+  $('#js-prev-card').on('click', navigateCards)
+  $('#js-next-card').on('click', navigateCards)
 }
 
 function handleNavClick(e) {
@@ -34,4 +25,40 @@ function checkWidth() {
 function relocateContent(){
   var tabsContent = $('.mdl-tabs section');
   tabsContent.appendTo('.js-mobile-content')
+}
+
+function navigateCards(e) {
+  // console.log($('.skill-card')[0])
+  const activeCard = $('.skill-card.active');
+
+  if(e.currentTarget.id === 'js-next-card') {
+    $('#js-prev-card').removeClass('hide-btn');
+    const nextCard = activeCard.next('.skill-card');
+    // check if there is a card available next
+    if(nextCard.length > 0) {
+      activeCard.toggleClass('active');
+      nextCard.toggleClass('active');
+    }
+  } else if(e.currentTarget.id === 'js-prev-card') {
+    $('#js-next-card').removeClass('hide-btn');
+    const prevCard = activeCard.prev('.skill-card');
+    // check if there is a card available before this card
+    if(prevCard.length > 0) {
+      activeCard.toggleClass('active');
+      prevCard.toggleClass('active');
+    } 
+  }
+  hideNavBtns();
+}
+
+function hideNavBtns (){
+  const activeCard = $('.skill-card.active');
+  if(activeCard.is('#skill-card4')) {
+    // hide the next nav button when end of card list is reached 
+    $('#js-next-card').addClass('hide-btn');
+  }
+  else if(activeCard.is('#skill-card1')) {
+    // hide the prev nav button when start of card list is reached
+    $('#js-prev-card').addClass('hide-btn');
+  }
 }

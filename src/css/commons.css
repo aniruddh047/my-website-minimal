@@ -9,6 +9,11 @@
   src: url("../assets/fonts/Roboto-Regular.ttf");
 }
 
+@font-face {
+  font-family: kaushan;
+  src: url("../assets/fonts/kaushan-script.regular.ttf");
+}
+
 /* animations */
 @keyframes fadein {
   from {
@@ -88,7 +93,7 @@ body, p, div {
   background-size: cover;
   overflow: hidden;
   height: 100vh;
-  opacity: 0.8;
+  opacity: 0.85;
   position: relative;
   /* top: 48px; */
 }
@@ -160,11 +165,54 @@ body, p, div {
   animation: scroll-icon-animation 1.5s linear infinite;
 }
 
+/* skills section styles */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+.skill-card {
+  height: 80%;
+  width: 50%;
+  display: none;
+  /* transition: display 1s linear; */
+}
+
+.skill-card.active {
+  display: flex;
+}
+
+.skill-desc {
+  font-size: 1em;
+  color: black;
+}
+
+#skill-card1 .mdl-card__title {
+  background: url('../assets/images/icons8-rocket-100.png') black center no-repeat;
+}
+
+#skill-card2 .mdl-card__title{
+  background: url('../assets/images/icons8-lock-100.png') black center no-repeat;
+}
+
+#skill-card3 .mdl-card__title{
+  background: url('../assets/images/icons8-responsive-100.png') black center no-repeat;
+}
+
+#skill-card4 .mdl-card__title{
+  background: url('../assets/images/icons8-code-100.png') black center no-repeat;
+}
+
+.icons8-link {
+  text-align: center;
+}
 /* about section styles */
 .about-section {
   background-image: url("../assets/images/nature-sunset-minimalist.jpg");
   background-size: cover;
-  opacity: 0.8;
+  opacity: 0.85;
   overflow: hidden;
   height: 100vh;
   position: relative;
@@ -193,10 +241,20 @@ body, p, div {
   padding: 0 50px;
 }
 
+.hobby-list {
+  font-size: 1.5em;
+  padding: 0 70px;
+  margin: 0;
+}
+
+.hobby-list li{
+  padding: 10px 0;
+}
+
 /* work section styles */
 .work-section {
   background: black;
-  opacity: 0.8;
+  opacity: 0.85;
   overflow: hidden;
   position: relative;
   padding-top: 28px;
@@ -206,7 +264,7 @@ body, p, div {
 /* contact section styles */
 .contact-section {
   background: black;
-  opacity: 0.8;
+  opacity: 0.85;
   overflow: hidden;
   position: relative;
   height: calc(100vh - 48px);
@@ -248,7 +306,7 @@ body, p, div {
 .tech-icons-panel {
   font-size: 3em;
   width: 75%;
-  margin: 30px auto;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -271,7 +329,7 @@ body, p, div {
 .download-resume-btn:active,
 .download-resume-btn:visited{
   display: block;
-  width: 150px;
+  width: 50%;
   color: white;
   background: #ff1227;
   margin: 40px auto;
@@ -279,4 +337,37 @@ body, p, div {
 
 .contact-section-info {
   vertical-align: top;
+}
+
+.contact-section-image {
+  background: url('../assets/images/cityscape.jpg');
+  background-size: cover;
+}
+
+.opacity-layer {
+  width: 100%;
+  background: #ff1227;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.xp {
+  transform: translateY(10vh);
+  opacity: 0;
+}
+
+.xp:first-child {
+  animation: appear-low-to-high 1s ease-out 2s forwards;
+}
+
+.xp:nth-child(2){
+  animation: appear-low-to-high 1s ease-out 3s forwards;
+}
+
+.xp:nth-child(3){
+  animation: appear-low-to-high 1s ease-out 4s forwards;
+}
+
+.copyright-info {
+  text-align: center;
 }
