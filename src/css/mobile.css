@@ -29,4 +29,111 @@
     transform: translateY(100vh);
     animation: appear-low-to-high 2s ease-in-out 5s forwards;
   }
+
+  .work-section {
+    padding-top: 0;
+  }
+  
+  .work-section-header {
+    margin-top: 0;
+    padding: 10vh 10vw 5vh 10vw;
+    line-height: 25px;
+  }
+
+  .career {
+    width: 100vw;
+    transform: translateX(0);
+  }
+
+  .work-xp-container {
+    padding: 5%;
+    display: block;
+    height: 70%;
+    position: relative;
+    color: white;
+  }
+
+  .xp {
+    transform: translateY(0vh);
+    animation: none;
+  }
+  .xp-text {
+    border-bottom: 2px solid;
+    padding: 15px 20px;
+    margin: 0;
+    color: white;
+  }
+  .progress-line {
+    top: 140px;
+    transform: scaleY(1);
+  }
+
+  .work-section-info {
+    width: 100vw;
+  }
+
+  .tech-icons-panel {
+    justify-content: space-around;
+  }
+
+  .carousel-container {
+    margin-top: 20px;
+  }
+
+  .btn-prev, .btn-next {
+    transform: scale(0.7);
+    margin: 5px;
+  }
+ 
+  .skill-card {
+    width: 65%;
+    font-size: 1em;
+    min-height: 350px;
+    margin-bottom: 20px;
+  }
+ 
+  .skill-card .mdl-card__title {
+    min-height: 200px;
+  }
+
+  .about-section .picture {
+    margin-left: -35px;
+    height: 100vh;
+  }
+
+  .about-info {
+    padding-top: 10vh;
+    height: 90vh;
+  }
+
+  .contact-section {
+    height: 100vh;
+  }
+
+  .contact-section-header {
+    padding: 8vh;
+  }
+
+  .contact-section-content{ 
+    height: 100%;
+  }
+
+  .contact-section-info {
+    width: 100vw;
+    transform: translateX(0);
+  }
+
+  .contact-section-container .separator::after {
+    transform: scaleX(1.25);
+  }
+
+  .social-link .address {
+    width: 60%;
+  }
+
+  .address-info .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }

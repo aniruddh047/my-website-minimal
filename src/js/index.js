@@ -6,11 +6,13 @@ function main() {
   $('#copyright-year').append(year);
   $(".js-header-btn").on("click", handleNavClick);
   checkWidth();
-  $('#js-prev-card').on('click', navigateCards)
-  $('#js-next-card').on('click', navigateCards)
+  $('#js-prev-card').on('click', navigateCards);
+  $('#js-next-card').on('click', navigateCards);
 }
 
 function handleNavClick(e) {
+  var d = document.querySelector('.mdl-layout');
+  d.MaterialLayout.toggleDrawer();
   var scrollto = "." + e.currentTarget.getAttribute("data-scrollto");
   $(scrollto)[0].scrollIntoView({ behavior: "smooth" });
 }
@@ -28,7 +30,6 @@ function relocateContent(){
 }
 
 function navigateCards(e) {
-  // console.log($('.skill-card')[0])
   const activeCard = $('.skill-card.active');
 
   if(e.currentTarget.id === 'js-next-card') {
