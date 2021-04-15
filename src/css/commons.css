@@ -434,6 +434,11 @@ margin-top: 25px;
   height: 70%;
  }
 
+ 
+ .btn-prev.hide-btn, .btn-next.hide-btn {
+  visibility: hidden;
+}
+
 .btn-prev, .btn-next {
   width: 50px;
   height: 50px;

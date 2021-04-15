@@ -191,10 +191,6 @@
   transform: scale(1.5);
 }
 
- .btn-prev.hide-btn, .btn-next.hide-btn {
-   visibility: hidden;
- }
-
 .contact-section-image {
   width: 50vw;
   display: inline-flex;
