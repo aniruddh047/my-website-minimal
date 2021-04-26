@@ -1,0 +1,26 @@
+@media only screen and (min-width: 767px) and (max-width: 1023px){
+    .logo {
+        transform: scale(.5);
+    }
+    
+    .work-xp-container {
+        display: block;
+        padding: 0;
+    }
+    .tech-icons-panel {
+        font-size: 2em;
+        width: 100%;
+    }
+
+    .skill-desc {
+        overflow: scroll;
+    }
+
+    .about-section .picture .profile-image {
+        margin: 15vh -8vh;
+    }
+
+    .social-link .address {
+        width: 60%;
+    }
+}
